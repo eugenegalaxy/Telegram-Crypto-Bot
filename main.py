@@ -17,7 +17,7 @@ from config_class import API_PROFILES
 
 
 # Bool that controls whether the App will run through Heroku or locally. If False -> runs locally.
-RUN_THROUGH_HEROKU = True
+RUN_THROUGH_HEROKU = False
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logging.getLogger('apscheduler.executors.default').setLevel(logging.WARNING)  # removes log print everytime a scheduled task was run.
@@ -29,9 +29,9 @@ TELEGRAM_TOKEN = API_PROFILES['TELEGRAM_TOKEN']
 STRIPE_TOKEN = API_PROFILES['STRIPE_TOKEN']
 HEROKU_URL_NAME = API_PROFILES['HEROKU_URL_NAME']
 
-DONATE_PRICE = 200  # 2$. Price that appears on /donate command.
+DONATE_PRICE = 100  # 2$. Price that appears on /donate command.
 DONATE_MAX_TIP = 150000  # 1500$. Internal, users don't see this.
-DONATE_SUGGESTED_TIPS = [69, 420, 6666, 133700]  # Memez... 0.69$, 4.20$, 66.66$, 1337$. Suggested tips that user sees when clicks "Pay Invoice" in /donate
+DONATE_SUGGESTED_TIPS = [1, 2, 5, 10]  # Memez... 0.69$, 4.20$, 66.66$, 1337$. Suggested tips that user sees when clicks "Pay Invoice" in /donate
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 
